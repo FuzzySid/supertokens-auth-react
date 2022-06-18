@@ -699,3 +699,17 @@ export function setPasswordlessFlowType(contactMethod, flowType) {
 export function isReact16() {
     return process.env.IS_REACT_16 === "true";
 }
+
+export async function getResetPasswordFormBackButton(page) {
+    const backButtonSelector =
+        "[data-supertokens='headerTitle resetPasswordHeaderTitle'] > [data-supertokens='backButton backButtonCommon']";
+
+    return await waitForSTElement(page, backButtonSelector);
+}
+
+export async function getResetPasswordSuccessBackToSignInButton(page) {
+    const backToSignInSelector =
+        "[data-supertokens='container'] > [data-supertokens='row'] > [data-supertokens='secondaryText secondaryLinkWithLeftArrow']";
+
+    return await waitForSTElement(page, backToSignInSelector);
+}

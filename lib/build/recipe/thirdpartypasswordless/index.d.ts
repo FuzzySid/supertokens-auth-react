@@ -144,7 +144,9 @@ export default class Wrapper {
     static EmailVerification: (prop?: any) => JSX.Element;
     static EmailVerificationTheme: typeof EmailVerificationTheme;
     static PasswordlessLinkClickedTheme: import("react").ComponentType<
-        import("../passwordless/types").LinkClickedScreenProps
+        import("../passwordless/types").LinkClickedScreenProps & {
+            children?: import("react").ReactNode;
+        }
     >;
     static PasswordlessLinkClicked: (prop?: any) => JSX.Element;
 }
