@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [unreleased]
 
+### Changes
+
+-   Added `loading` to the session context
+-   Added `SuperTokensWrapper` intended to wrap around whole applications, providing a session context
+-   Made auth wrappers SSR compatible
+
 ## [0.22.3] - 2022-06-14
 
 ### Build changes
